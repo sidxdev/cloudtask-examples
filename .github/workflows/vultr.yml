@@ -12,7 +12,8 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-    - uses: sidxdev/cloudtask@v0.3
+    - uses: actions/checkout@v2.4.0
+    - uses: sidxdev/cloudtask@v0.4
       with:
         vendor: vultr
         api_key: ${{ secrets.vultr_api_key }}
