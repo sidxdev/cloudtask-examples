@@ -12,7 +12,7 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-    - uses: sidxdev/cloudtask@v0.9
+    - uses: sidxdev/cloudtask@v0.10
       with:
         vendor: vultr
         api_key: ${{ secrets.vultr_api_key }}
