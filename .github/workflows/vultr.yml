@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: sidxdev/cloudtask@v1
+    - uses: sidxdev/cloudtask@v0.1
       with:
         vendor: vultr
         api_key: ${{secrets.vultr_api_key}}
