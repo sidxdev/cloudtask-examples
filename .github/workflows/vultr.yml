@@ -1,11 +1,19 @@
 name: "Vultr"
 
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Test input'
+        type: string
+        required: true 
+
 jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: sidxdev/cloudtask
+    - uses: sidxdev/cloudtask@v1
       with:
         vendor: vultr
         api_key: ${{secrets.vultr_api_key}}
