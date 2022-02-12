@@ -12,10 +12,9 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: sidxdev/cloudtask@v0.2
+    - uses: sidxdev/cloudtask@v0.3
       with:
         vendor: vultr
-        api_key: ${{secrets.vultr_api_key}}
+        api_key: ${{ secrets.vultr_api_key }}
         task: |
-          echo 'Hello World'
+          echo 'Hello ${{ github.event.inputs.name }}'
